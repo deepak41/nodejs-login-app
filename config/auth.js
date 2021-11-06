@@ -32,13 +32,13 @@ exports.authenticate = function(req, res, next) {
 			message: "Authorisation token is invalid or expired!"
 		})
 	}
-	if(decoded.payload == token.payload) {
-		return next()
+	if(decoded.payload != token.payload) {
+		return next({
+			status: 401,
+			message: "Authorisation token is invalid or expired!"
+		})
 	}
-	next({
-		status: 401,
-		message: "Authorisation token is invalid or expired!"
-	})
+	next();
 };
 
 
