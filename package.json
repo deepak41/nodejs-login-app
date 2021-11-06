@@ -1,0 +1,24 @@
+{
+    "name": "nodejs-login-app",
+    "version": "1.0.1",
+    "description": "Built on NodeJS",
+    "main": "index.js",
+    "author": "Deepak Kumar Singh",
+    "license": "MIT",
+    "dependencies": {
+        "async": "^2.6.0",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.13.1",
+        "change-case": "^3.0.1",
+        "dotenv": "^4.0.0",
+        "express": "^4.13.0",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "~4.11.11",
+        "morgan": "^1.6.0",
+        "nconf": "^0.8.4",
+        "randomstring": "^1.2.1",
+        "request": "^2.88.0",
+        "require-dir": "^0.3.0",
+        "winston": "^2.3.1"
+    }
+}
