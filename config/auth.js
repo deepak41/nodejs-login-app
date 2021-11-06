@@ -26,7 +26,7 @@ exports.authenticate = function(req, res, next) {
 	var token = decodeBase64(req.headers.authorization);
 	try {
 		var decoded = jwt.verify(token.signature, nconf.get('secret-key'));
-	} catch (error) {
+	} catch (err) {
 		return next({
 			status: 401,
 			message: "Authorisation token is invalid or expired!"
