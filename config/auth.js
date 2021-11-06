@@ -38,6 +38,7 @@ exports.authenticate = function(req, res, next) {
 			message: "Authorisation token is invalid or expired!"
 		})
 	}
+	res.locals.user_info = token.payload;
 	next();
 };
 
